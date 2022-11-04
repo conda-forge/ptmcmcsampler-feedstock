@@ -1,5 +1,5 @@
 {% set name = "ptmcmcsampler" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ptmcmcsampler-{{ version }}.tar.gz
-  sha256: 336df081ac414db81dc8fad84e68fca1aeb200420f0851e1194f6b96c53bf3f5
+  sha256: 2e44a3b3cc7056a532c3a045e7e6e77cd57c7a2f7cdb41fbbf249882ac9825dd
 
 build:
   number: 0
