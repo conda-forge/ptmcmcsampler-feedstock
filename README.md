@@ -1,7 +1,7 @@
 About ptmcmcsampler
 ===================
 
-Home: https://github.com/jellis18/PTMCMCSampler
+Home: https://github.com/nanograv/PTMCMCSampler
 
 Package license: MIT
 
@@ -143,5 +143,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@vhaasteren](https://github.com/vhaasteren/)
 * [@jellis18](https://github.com/jellis18/)
 
