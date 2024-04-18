@@ -1,5 +1,5 @@
 {% set name = "ptmcmcsampler" %}
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ptmcmcsampler-{{ version }}.tar.gz
-  sha256: 2e44a3b3cc7056a532c3a045e7e6e77cd57c7a2f7cdb41fbbf249882ac9825dd
+  sha256: 3570c062abb849b0bd1e80c9d35a5cd13f88da7f5006aac98a5dfc0abdcc15bb
 
 build:
   number: 0
@@ -18,10 +18,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
     - numpy >=1.16.3
-    - python >=3.6
+    - python >=3.8
     - scipy >=1.2.0
 
 test:
@@ -35,7 +35,7 @@ test:
 # NOTE: licence file can be removed from recipe in next release
 # as it will be packaged in source dist
 about:
-  home: https://github.com/jellis18/PTMCMCSampler
+  home: https://github.com/nanograv/PTMCMCSampler
   summary: Parallel tempering MCMC sampler written in Python
   license: MIT
   license_file: LICENSE
