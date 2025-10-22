@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ptmcmcsampler-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptmcmcsampler-{{ version }}.tar.gz
   sha256: 954892f4d1e24fb0b412cc437dd0b210faaa1500e147ae99b2217956de8a2943
 
 build:
@@ -18,10 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - setuptools
+    - python {{ python_min }}
   run:
     - numpy >=1.16.3
-    - python >=3.8
+    - python >={{ python_min }}
     - scipy >=1.2.0
 
 test:
@@ -31,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 # NOTE: licence file can be removed from recipe in next release
 # as it will be packaged in source dist
