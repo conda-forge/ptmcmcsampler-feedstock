@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - setuptools
+    - wheel
     - python {{ python_min }}
   run:
     - numpy >=1.16.3
