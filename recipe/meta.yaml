@@ -14,13 +14,13 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
+  skip: true  # [py >= 314]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - setuptools
-    - setuptools_scm
     - wheel
     - python {{ python_min }}
   run:
