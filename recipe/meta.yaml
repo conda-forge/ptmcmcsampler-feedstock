@@ -1,5 +1,6 @@
 {% set name = "ptmcmcsampler" %}
-{% set version = "2.1.2" %}
+{% set version = "2.1.4" %}
+{% set python_min = "3.8" %}
 
 
 package:
@@ -7,21 +8,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ptmcmcsampler-{{ version }}.tar.gz
-  sha256: 3570c062abb849b0bd1e80c9d35a5cd13f88da7f5006aac98a5dfc0abdcc15bb
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptmcmcsampler-{{ version }}.tar.gz
+  sha256: 80d0d0b616a7170de2e0e3ac45fed31ff482da8a66de9ef646ed02b42da7fee9
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install --no-build-isolation . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - setuptools
+    - wheel
+    - python {{ python_min }}
   run:
     - numpy >=1.16.3
-    - python >=3.8
+    - python >={{ python_min }}
     - scipy >=1.2.0
 
 test:
@@ -31,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 # NOTE: licence file can be removed from recipe in next release
 # as it will be packaged in source dist
